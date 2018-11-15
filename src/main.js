@@ -82,7 +82,7 @@ class AdUnit extends Mads {
     events() {
         this.adSize = this.fixAdSize()
         this.preloadImages()
-        
+        this.setPosition()
     }
 
     preloadImages() {
@@ -98,6 +98,22 @@ class AdUnit extends Mads {
                 this.firstRender()
             }
         })
+    }
+
+    applyStyles(ele, styleObject) {
+        for (var s in styleObject) {
+            ele.style[s] = styleObject[s]
+        }
+    }
+
+    setPosition() {
+        this.applyStyles(document.getElementById('logo'), this.data.styles[this.adSize].logo)
+        this.applyStyles(document.getElementById('eraserWrapper'), this.data.styles[this.adSize].eraser)
+        this.applyStyles(document.getElementById('icon1'), this.data.styles[this.adSize].icon1)
+        this.applyStyles(document.getElementById('icon2'), this.data.styles[this.adSize].icon2)
+        this.applyStyles(document.getElementById('icon3'), this.data.styles[this.adSize].icon3)
+        this.applyStyles(document.getElementById('ct'), this.data.styles[this.adSize].ct)
+        this.applyStyles(document.getElementById('gesture'), this.data.styles[this.adSize].gesture)
     }
 
     firstRender() {

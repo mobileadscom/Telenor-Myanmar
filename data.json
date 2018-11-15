@@ -1,6 +1,4 @@
 json_data = {
-	"width":320,
-	"height":480,
 	"320x480":{
 		"bg1":"img/320x480/bg01.png",
 		"bg2":"img/320x480/bg02.png",
@@ -17,9 +15,10 @@ json_data = {
 	"styles": {
 		"320x480": {
 			"logo": {
-			  "zIndex": "11",
-			  "top": "20px",
-			  "right": "0px",
+				"position": "absolute",
+				"zIndex": "11",
+				"top": "20px",
+				"right": "0px",
 			},
 			"eraser": {
 				"position": "absolute",
