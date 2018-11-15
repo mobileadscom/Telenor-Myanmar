@@ -82,6 +82,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 21;
+  pointer-events: none;
 }
 
 #ct:hover {
@@ -91,12 +92,12 @@ body {
 #ct img {
   position: absolute;
   width: 100%;
-  animation: growFade 2s linear infinite;
+  animation: growFade 3s linear infinite;
   opacity: 0;
 }
 
 #ct #cta2 {
-  animation-delay: 1s;
+  animation-delay: 1.5s;
 }
 
 @-webkit-keyframes slide-in-tl {

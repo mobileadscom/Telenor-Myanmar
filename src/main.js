@@ -49,6 +49,7 @@ class AdUnit extends Mads {
                 <div id="eraserWrapper">
                     <img id="card1" />
                     <img id="card2" />
+                    <img id="cta1d" />
                 </div>
                 <img id="icon1" />
                 <img id="icon2" />
@@ -91,6 +92,7 @@ class AdUnit extends Mads {
                 this.data[this.adSize].lamp, 
                 this.data[this.adSize].logo, 
                 this.data[this.adSize].bg1, 
+                this.data[this.adSize].cta1,
                 this.data[this.adSize].card1,
                 this.data[this.adSize].card2,
             ],
@@ -108,6 +110,7 @@ class AdUnit extends Mads {
 
     setPosition() {
         this.applyStyles(document.getElementById('logo'), this.data.styles[this.adSize].logo)
+        this.applyStyles(document.getElementById('cta1d'), this.data.styles[this.adSize].cta1d)
         this.applyStyles(document.getElementById('eraserWrapper'), this.data.styles[this.adSize].eraser)
         this.applyStyles(document.getElementById('icon1'), this.data.styles[this.adSize].icon1)
         this.applyStyles(document.getElementById('icon2'), this.data.styles[this.adSize].icon2)
@@ -122,7 +125,7 @@ class AdUnit extends Mads {
         document.getElementById('logo').src = this.data[this.adSize].logo
         document.getElementById('bg1').src = this.data[this.adSize].bg1
         document.getElementById('card1').src = this.data[this.adSize].card1
-        document.getElementById('card2').src = this.data[this.adSize].card2
+        
 
         setTimeout(() => {
             this.eraser = new Eraser({
@@ -132,12 +135,15 @@ class AdUnit extends Mads {
                 height: 341,
                 startFunction: () => {
                     document.getElementById('gesture').style.display = 'none'
+                    this.tracker('E', 'scratch')
                 },
                 completeFunction: function() {
                     this.reveal()
                     ad.completeScratch()
                 }
             })
+            document.getElementById('card2').src = this.data[this.adSize].card2
+            document.getElementById('cta1d').src = this.data[this.adSize].cta1
         }, 300)
         
         this.secondBatch = new imagePreloader({
@@ -146,7 +152,7 @@ class AdUnit extends Mads {
                 this.data[this.adSize].icon1,
                 this.data[this.adSize].icon2,
                 this.data[this.adSize].icon3,
-                this.data[this.adSize].cta1,
+                // this.data[this.adSize].cta1,
                 this.data[this.adSize].cta2,
             ],
             callback: () => {
@@ -179,12 +185,14 @@ class AdUnit extends Mads {
             document.getElementById('bg2').style.opacity = 1
         }, 2500)
         setTimeout(() => {
+            document.getElementById('cta1d').style.display = 'none'
             document.getElementById('ct').style.display = 'block'
             document.getElementById('ct').addEventListener('click', () => {
                 this.tracker('CTR', 'clickthrough')
                 this.linkOpener(this.data.clickthrough)
             })
         }, 2800)
+        this.tracker('E', 'scratch_complete')
     }
 }
 

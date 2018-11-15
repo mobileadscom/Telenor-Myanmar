@@ -5,7 +5,7 @@ json_data = {
 		"lamp":"img/320x480/lamps.png",
 		"logo":"img/320x480/logo.png",
 		"card1":"img/320x480/card1.png",
-		"card2":"img/320x480/card2.png",
+		"card2":"img/320x480/card3.png",
 		"icon1": "img/320x480/icon1.png",
 		"icon2": "img/320x480/icon2.png",
 		"icon3": "img/320x480/icon3.png",
@@ -54,6 +54,12 @@ json_data = {
 				"right": "8px",
 				"animation": "growIn 0.5s linear"
 			},
+			"cta1d": {
+				"width": "90px",
+				"top": "202px",
+				"left": "102px",
+				"transform": "none"
+			},
 			"ct": {
 				"position": "absolute",
 				"zIndex": "40",
@@ -67,10 +73,11 @@ json_data = {
 				"top": "130px",
 				"left": "40px",
 				"zIndex": "50",
-				"animation": "slide-in-tl 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite"
+				"animation": "slide-in-tl 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite",
+				"pointer-events": "none"
 			}
 		}
 	},
 	"gesture":"img/hand.png",
-	"clickthrough":"tel:*141*"
+	"clickthrough":"https://www.telenor.com.mm/my/offer/tazaungdaing-promotion"
 }
