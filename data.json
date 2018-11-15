@@ -1,0 +1,77 @@
+json_data = {
+	"width":320,
+	"height":480,
+	"320x480":{
+		"bg1":"img/320x480/bg01.png",
+		"bg2":"img/320x480/bg02.png",
+		"lamp":"img/320x480/lamps.png",
+		"logo":"img/320x480/logo.png",
+		"card1":"img/320x480/card1.png",
+		"card2":"img/320x480/card2.png",
+		"icon1": "img/320x480/icon1.png",
+		"icon2": "img/320x480/icon2.png",
+		"icon3": "img/320x480/icon3.png",
+		"cta1": "img/320x480/cta1.png",
+		"cta2": "img/320x480/cta2.png"
+	},
+	"styles": {
+		"320x480": {
+			"logo": {
+			  "zIndex": "11",
+			  "top": "20px",
+			  "right": "0px",
+			},
+			"eraser": {
+				"position": "absolute",
+				"width": "260px",
+				"height": "341px",
+				"zIndex": "20",
+				"top": "100px",
+				"left": "0px"
+			},
+			"icon1": {
+				"position": "absolute",
+				"zIndex": "30",
+				"display": "none",
+				"top": "130px",
+				"right": "8px",
+				"width": "88px",
+				"animation": "growIn 0.5s linear"
+			},
+			"icon2": {
+				"position": "absolute",
+				"zIndex": "30",
+				"display": "none",
+				"top": "245px",
+				"right": "0px",
+				"width": "105px",
+				"animation": "growIn 0.5s linear"
+			},
+			"icon3": {
+				"position": "absolute",
+				"zIndex": "30",
+				"display": "none",
+				"top": "338px",
+				"right": "8px",
+				"animation": "growIn 0.5s linear"
+			},
+			"ct": {
+				"position": "absolute",
+				"zIndex": "40",
+				"top": "302px",
+				"left": "102px",
+				"width": "90px",
+				"display": "none",
+			},
+			"gesture": {
+				"position": "absolute",
+				"top": "130px",
+				"left": "40px",
+				"zIndex": "50",
+				"animation": "slide-in-tl 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite"
+			}
+		}
+	},
+	"gesture":"img/hand.png",
+	"clickthrough":"tel:*141*"
+}
