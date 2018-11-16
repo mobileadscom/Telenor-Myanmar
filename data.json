@@ -12,6 +12,19 @@ json_data = {
 		"cta1": "img/320x480/cta1.png",
 		"cta2": "img/320x480/cta2.png"
 	},
+	"300x250":{
+		"bg1":"img/300x250/bg01.png",
+		"bg2":"img/300x250/bg02.png",
+		"lamp":"img/300x250/lights.png",
+		"logo":"img/300x250/logo.png",
+		"card1":"img/300x250/card01.png",
+		"card2":"img/300x250/card02.png",
+		"icon1": "img/300x250/icon01.png",
+		"icon2": "img/300x250/icon02.png",
+		"icon3": "img/300x250/icon03.png",
+		"cta1": "img/300x250/cta01.png",
+		"cta2": "img/300x250/cta02.png"
+	},
 	"styles": {
 		"320x480": {
 			"logo": {
@@ -74,6 +87,69 @@ json_data = {
 				"left": "40px",
 				"zIndex": "50",
 				"animation": "slide-in-tl 4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite",
+				"pointer-events": "none"
+			}
+		},
+		"300x250": {
+			"logo": {
+				"position": "absolute",
+				"zIndex": "11",
+				"top": "12px",
+				"right": "0px",
+			},
+			"eraser": {
+				"position": "absolute",
+				"width": "165px",
+				"height": "222px",
+				"zIndex": "20",
+				"top": "28px",
+				"left": "0px"
+			},
+			"icon1": {
+				"position": "absolute",
+				"zIndex": "30",
+				"display": "none",
+				"top": "83px",
+				"right": "95px",
+				"animation": "growIn 0.5s linear"
+			},
+			"icon2": {
+				"position": "absolute",
+				"zIndex": "30",
+				"display": "none",
+				"top": "130px",
+				"right": "15px",
+				"animation": "growIn 0.5s linear"
+			},
+			"icon3": {
+				"position": "absolute",
+				"zIndex": "30",
+				"display": "none",
+				"top": "185px",
+				"right": "90px",
+				"animation": "growIn 0.5s linear"
+			},
+			"cta1d": {
+				"width": "90px",
+				"top": "126px",
+				"left": "52px",
+				"transform": "none"
+			},
+			"ct": {
+				"position": "absolute",
+				"zIndex": "40",
+				"top": "154px",
+				"left": "52px",
+				"width": "90px",
+				"display": "none",
+			},
+			"gesture": {
+				"position": "absolute",
+				"top": "50px",
+				"left": "10px",
+				"width": "50px",
+				"zIndex": "50",
+				"animation": "slide-in-tls 4.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both infinite",
 				"pointer-events": "none"
 			}
 		}

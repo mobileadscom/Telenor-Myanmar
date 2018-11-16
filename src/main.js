@@ -23,9 +23,9 @@ class AdUnit extends Mads {
             return w.toString() + 'x' + h.toString();
         }
         else {
-            document.getElementById('rma-widget').style.width = '320px';
-            document.getElementById('rma-widget').style.height = '480px';
-            return '320x480';
+            document.getElementById('rma-widget').style.width = '300px';
+            document.getElementById('rma-widget').style.height = '250px';
+            return '300x250';
         }
   }
 
@@ -131,8 +131,8 @@ class AdUnit extends Mads {
             this.eraser = new Eraser({
                 ele: document.getElementById('card1'),
                 completeRatio: 0.5,
-                width: 260,
-                height: 341,
+     /*           width: 260,
+                height: 341,*/
                 startFunction: () => {
                     document.getElementById('gesture').style.display = 'none'
                     this.tracker('E', 'scratch')

@@ -7,8 +7,8 @@ export default class Eraser {
     init (options) {
 
         this.ele = options.ele
-        this.width = options.width || this.ele.naturalWidth
-        this.height = options.height || this.ele.naturalHeight
+        this.width = options.width || this.ele.width
+        this.height = options.height || this.ele.height
         this.completeRatio = options.completeRatio || 0.3
         this.completeFunction = options.completeFunction || null
         this.startFunction = options.startFunction || null
